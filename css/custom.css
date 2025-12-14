@@ -1,0 +1,572 @@
+.footer-bg {
+    border-top: 2px solid var(--pico-color-orange-500);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+
+tfoot {
+    background-color: var(--pico-color-orange-100);
+}
+nav ,nav ul {
+    flex-flow: column;
+}
+@media (min-width: 37.5rem) {
+    nav ,nav ul {
+    flex-flow: row;
+    }
+}
+
+
+/*nav*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px; 
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+/*nav*/
+
+
+/*tafla,form*/
+
+.tafla-form {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 2rem;
+  flex-wrap: wrap; 
+}
+
+
+.tafla-form .left {
+  flex: 1 1 60%;
+  min-width: 320px;
+}
+
+
+.tafla-form .right {
+  flex: 0 1 36%;
+  min-width: 300px;
+}
+
+
+.tafla-form table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+.tafla-form th,
+.tafla-form td {
+  padding: 0.75rem 0.6rem;
+  border-bottom: 1px solid #e6e6e6; 
+  text-align: left;
+}
+
+
+.tafla-form tfoot th {
+  font-weight: 700;
+}
+
+
+.tafla-form form {
+  width: 100%;
+}
+
+
+
+/*Textatilkynning rennur yfir skjáinn frá hægri til vinstri.*/
+
+.alert-message {
+  background-color: var(--pico-primary-background);
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  top:3rem;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.alert-message h4 {
+  position: relative;
+  color: var(--pico-contrast);
+  margin: 0;
+  padding: .3rem 0;
+  animation-name: myAlert;
+  animation-duration: 10s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+
+}
+
+/*Textatilkynning rennur yfir skjáinn frá hægri til vinstri.*/
+
+
+
+
+.spinnerr {
+    display: flex;
+    justify-content: center;
+}
+
+.spinnerr-anim {
+    display: flex;
+    justify-content: center;
+    animation-name: anim-spinner;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: alternate;
+}
+
+@keyframes anim-spinner {
+  0% {
+    transform:scaleX(0);
+    transform:scaleY(0);
+    
+  }
+  33% {
+    transform:scaleX(1);
+    
+  }
+  66% {
+    transform:scaleX(-1);
+    
+  }
+
+  100% {
+    transform:scaleX(0);
+    transform:scaleY(1);
+   
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dalkur-anim {
+    animation-name: anim-dalkur;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+
+.dalkur-anim:hover{
+  animation-play-state: running;
+}
+@keyframes anim-dalkur {
+  0% {
+    transform:translateY(0px);
+  }
+  33% {
+    transform:translateY(5px);
+  }
+  66% {
+    transform:translateY(-5px);
+  }
+  100% {
+    transform:translateY(0px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Viðbragsðshreyfing á hnapp (Transform animation)*/
+
+.send-form {
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+    animation-name:  send-form-anim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+
+.send-form:hover{
+  animation-play-state: running;
+}
+
+
+@keyframes send-form-anim {
+  0% {
+    transform:translateY(0px);
+  }
+  33% {
+    transform:translateY(5px);
+  }
+  66% {
+    transform:translateY(-5px);
+  }
+  100% {
+    transform:translateY(0px);
+  }
+}
+
+
+/*Viðbragsðshreyfing á hnapp (Transform animation)*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Myndasýning (slideshow)*/
+.slideshow {
+  margin: 6rem 2rem;
+  height: 600px;
+  width: 800px;
+  background-size: 100% 100%;
+  animation-name: slideshow;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+
+@keyframes slideshow {
+  0% {
+    background-image: url(/images/slide1.webp);
+  }
+  40% {
+    background-image: url(/images/slide2.webp);
+  }
+  70% {
+    background-image: url(/images/slide3.webp);
+  }
+  100% {
+    background-image: url(/images/slide4.webp);
+  }
+}
+/*Myndasýning (slideshow)*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*Spunatákn (_spinner) birtist á meðan stór mynd er hlaðið inn í vafra (vafri er stilltur á hæga 4G tengingu)*/
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pico-primary-inverse);
+  transition: opacity 1s, visibility 1s;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after{
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid var(--pico-color);
+  border-top-color: var(--pico-ins-color);
+  border-radius: 40%;
+  animation: loading 0.75s ease-out infinite;
+}
+
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+/*Spunatákn (_spinner) birtist á meðan stór mynd er hlaðið inn í vafra (vafri er stilltur á hæga 4G tengingu)*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Textatilkynning rennur yfir skjáinn frá hægri til vinstri.*/
+@keyframes myAlert {
+  from {bottom:-6rem;}
+  to {bottom: 10rem;}
+}
+/*Textatilkynning rennur yfir skjáinn frá hægri til vinstri.*/
+
+
+
+@media (min-width: 992px) {
+  .tafla-form { flex-wrap: nowrap; }
+  .tafla-form .left { order: 1; }
+  .tafla-form .right { order: 2; }
+
+}
+
+
+@media (max-width: 991px) {
+  .tafla-form {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .slideshow {
+    margin: 6rem 1rem;
+    height: 300px;
+    width: 300px;
+    background-size: 100% 100%;
+}
+
+    @keyframes myAlert {
+    from {left:100rem;}
+    to {left: -30rem;}
+  }
+  .tafla-form .left,
+  .tafla-form .right {
+    min-width: 0;
+    flex: 1 1 100%;
+  }
+}
+
+@media screen and (min-width:80rem){
+    @keyframes myAlert {
+      from {left:120rem;}
+      to {left: -30rem;}
+  }
+}
+/*tafla,form*/
+
+
+
+
+
+
+/* Modal styles for login */
+#modal-login article {
+  max-width: 400px;
+  padding: 1rem;
+}
+
+#modal-login label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#modal-login input {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+#modal-login footer {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#modal-login button[type="submit"] {
+  width: 100%;
+}
+
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem; 
+}
+
+
+nav ul:last-child {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav ul:last-child a[role="button"] {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent !important; 
+}
+
+.search-area {
+    display: grid;
+    grid-template-columns: 1fr max-content; 
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.search-area button {
+    margin-top: 0; 
+}
+
+
+article.menu-item {
+    border: 1px solid var(--pico-border-color); 
+    border-radius: var(--pico-border-radius);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--pico-background-color); 
+}
+
+article.menu-item:hover {
+    background-color: var(--pico-form-element-hover-background-color);
+}
+
+article.menu-item span[aria-hidden="true"] {
+    font-weight: bold;
+    color: var(--pico-secondary);
+}
+
+
+.dashboard-grid > div:last-child h3 {
+    background-color: var(--pico-primary-background); 
+    color: var(--pico-h1-color); 
+    padding: 1rem;
+    border-radius: var(--pico-border-radius) var(--pico-border-radius) 0 0;
+    text-align: right; 
+    margin-bottom: 0;
+}
+
+.dashboard-grid > div:last-child {
+    background-color: var(--pico-primary-background); 
+    color: var(--pico-h1-color); 
+    border-radius: var(--pico-border-radius);
+}
+
+
+
+.summary-box {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin: 0; 
+    text-align: right; 
+    border-top: 1px solid var(--pico-border-color); 
+}
+
+.summary-box:first-of-type {
+    border-top: none; 
+}
+
+.summary-box p {
+    margin: 0; 
+}
+
+.summary-box .secondary {
+    font-size: 1em; 
+    color: var(--pico-secondary-color); 
+    font-weight: 300; 
+}
+
+.summary-box .value {
+    font-size: 3em; 
+    font-weight: 700;
+    line-height: 1; 
+}
+
+
+
+@media (max-width: 992px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-grid > div:last-child h3,
+    .dashboard-grid > div:last-child {
+        text-align: left;
+    }
+    
+    .summary-box {
+        text-align: left;
+    }
+}
+
+
+.dropdowndiv {
+  display: flex;
+  justify-content: flex-start; 
+}
+
+/*
+       <img
+            id="big-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg"
+            alt="Large Nature"
+            loading="eager"
+            style="display:block;"
+        >
+
+        <div class="spinner"></div>*/

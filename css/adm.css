@@ -1,0 +1,248 @@
+
+nav.header-nav {
+    background-color: var(--pico-background-color) !important;
+    border-bottom: 1px solid var(--pico-border-color);
+}
+nav.header-nav a {
+    color: var(--pico-h2-color) !important; 
+}
+
+
+
+.description-text {
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.icon-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon-placeholder {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent !important; 
+    border-color: var(--pico-secondary) !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+
+
+.dashboard-grid {
+    grid-template-columns: 3fr 1fr;
+    display: grid;
+    gap: 2rem; 
+}
+
+.search-area {
+    display: grid;
+    grid-template-columns: 1fr max-content; 
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.search-area button {
+    margin-top: 0; 
+}
+
+
+
+
+article.menu-item {
+    border: 1px solid var(--pico-border-color);
+    border-radius: var(--pico-border-radius);
+    padding: 1rem;
+    margin-bottom: 0.5rem; 
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+article.menu-item:hover {
+    background-color: var(--pico-form-element-hover-background-color);
+}
+
+article.menu-item span[aria-hidden="true"] {
+    font-weight: bold;
+    color: var(--pico-secondary);
+}
+
+
+
+
+
+details > summary {
+    list-style: none;
+    padding: 0;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.menu-item-summary {
+    border: 1px solid var(--pico-border-color);
+    border-radius: var(--pico-border-radius);
+    padding: 1rem;
+    margin-bottom: 0.5rem; 
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.menu-item-summary:hover {
+    background-color: var(--pico-form-element-hover-background-color);
+}
+
+
+
+details[open] .summary-arrow {
+    transform: rotate(90deg);
+}
+
+.summary-arrow {
+    font-weight: bold;
+    color: var(--pico-secondary);
+    transition: transform 0.2s;
+}
+
+
+#users-view-content {
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
+.user-filter-form {
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.user-filter-form select {
+    padding: 1rem;
+    border: 1px solid var(--pico-border-color);
+    border-radius: var(--pico-border-radius);
+    background-image: none; 
+}
+
+table {
+    margin-bottom: 1rem;
+}
+
+table thead th {
+    text-align: left;
+    font-weight: 400; 
+}
+
+
+
+
+article.summary-container {
+    padding: 1rem 0; 
+    border: 1px solid var(--pico-border-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); 
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.summary-container h3 {
+    text-align: right; 
+    margin: 0;
+    padding: 0 1rem 0.5rem 1rem;
+    border-bottom: 1px solid var(--pico-border-color); 
+    font-weight: 400; 
+    font-size: 1.5em; 
+    color: var(--pico-color);
+}
+
+.summary-box {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    text-align: right; 
+}
+
+.summary-box p {
+    margin: 0; 
+}
+
+.summary-box .label {
+    font-size: 1em;
+    color: var(--pico-primary); 
+    padding-bottom: 0.2rem;
+    font-weight: 500;
+}
+
+.summary-box .value {
+    font-size: 3.5em; 
+    font-weight: 700;
+    line-height: 1; 
+}
+
+
+
+@media (max-width: 992px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav.header-nav ul:first-child {
+        display: none; 
+    }
+    
+    .summary-container {
+        order: -1; 
+        padding: 1rem;
+    }
+    
+    .summary-container h3,
+    .summary-box {
+        text-align: left;
+    }
+
+    .summary-box .value {
+        font-size: 2.5em; 
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    main h1 {
+        font-size: 2em;
+    }
+
+    nav.header-nav ul:first-child {
+        display: none; 
+    }
+    nav.header-nav ul:last-child {
+        gap: 0.25rem;
+    }
+    nav.header-nav li:first-child a { 
+        display: none; 
+    }
+
+    .search-area {
+        grid-template-columns: 1fr; 
+        gap: 1rem;
+    }
+
+    figure {
+        overflow-x: auto;
+    }
+}

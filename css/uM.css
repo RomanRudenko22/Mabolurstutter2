@@ -1,0 +1,45 @@
+#body {
+    background-color: var(--pico-mark-background-color) ;
+}
+#hea {
+    background-color: var(--pico-primary-background);
+    --pico-color: white;
+}
+
+
+.container {
+    display: grid;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px;
+
+}
+
+.item1 {
+    grid-area: 1 / 1 / 5/ 6;
+}
+.item2 {
+    grid-area: 1 /8 / 7/ 7;
+}
+.footer {
+    padding-left: 2rem;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.button{
+    --pico-background-color: var(--pico-color);
+    --pico-text-selection-color: var(--pico-mark-background-color);    
+}
+.button:hover{
+    --pico-background-color: var(--pico-mark-background-color);
+}
+.col-1 {
+    font-family: "Science Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400 ;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100,
+        "CTRS" 0;
+}

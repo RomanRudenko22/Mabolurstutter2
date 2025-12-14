@@ -1,0 +1,123 @@
+#body {
+    background-color: var(--pico-mark-background-color) ;
+}
+#hea {
+    background-color: var(--pico-primary-background);
+    --pico-color: white;
+}
+
+
+
+#form {
+    height: auto;
+    width: auto;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 200px 200px 200px 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px 200px 200px 200px;
+
+}
+
+.item1 {
+    grid-row: 1 / 4;
+    grid-column: 1/10;
+    padding: 1rem;
+    
+}
+.item2 {
+    grid-row: 4 / 6;
+    grid-column: 1/4;
+    padding-left: 1rem;
+    padding-top: 1.6rem;
+}
+.item3 {
+    grid-row: 4 / 10;
+    grid-column: 4/10;
+}
+.footer {
+    padding-left: 2rem;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.button{
+    --pico-background-color: var(--pico-color);
+    --pico-text-selection-color: var(--pico-mark-background-color);    
+}
+.button:hover{
+    --pico-background-color: var(--pico-mark-background-color);
+}
+
+.mai {
+    font-family: "Science Gothic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400 ;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100,
+        "CTRS" 0;
+}
+
+
+.image {
+    position: relative;
+    left: 1000px;
+    bottom: 630px;
+}
+
+.image {
+
+    display: flex;
+    justify-content: center;
+    animation-name: anim-imge;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: alternate;
+}
+
+@keyframes anim-imge {
+  0% {
+    transform:scaleX(0);
+    
+    
+  }
+  33% {
+    transform:scaleX(1);
+    
+  }
+  66% {
+    transform:scaleX(-1);
+  }
+
+  100% {
+    transform:scaleX(0);   
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

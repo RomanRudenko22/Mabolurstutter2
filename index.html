@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/pico.green.css">
+    <link rel="stylesheet" href="css/tablemix.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/slideshow.css">
+    <link rel="stylesheet" href="css/stylesmain.css">
+    <link rel="stylesheet" href="scripts/modal.js">
+    <link rel="stylesheet" href="css/style.css">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+    
+    
+    <nav id="hea">
+        <ul>
+            <li> <span class="icon-logoroman"></span><strong>Mabolurstutter</strong></li>
+        </ul>
+        <ul>
+            <li>
+                <button class="button"><a href="#" data-target="modal-login" onclick="toggleModal(event)">Innskráning</a> </button>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
+
+    <section class="container1">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-1" src="images/1.webp" alt="image1" />
+                <img id="slide-2" src="images/2.webp" alt="image2" />
+                <img id="slide-3" src="images/3.webp" alt="image3" />
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <main class="mai">
+        <div class="container">
+            <div class="item1">
+                    <a href="um.html"><h3>Um okkur</h3></a>
+                        
+                    <p>Velkomin í Mabolurstutter  – rými þar sem tiska mætir persónuleika. Við trúum því að stuttermabolur sé ekki bara grunnflík, heldur strigi fyrir tjáningu.Hönnunarteymið okkar vinnur að því að skapa einstakar línur sem þú finnur ekki í venjulegum verslunarmiðstöðvum. Við notum eingöngu umhverfisvæna bómull og nútíma prenttækni sem tryggir að litirnir haldist skærir, jafnvel eftir hundrað þvotta.</p>
+                    
+
+
+                    <h4>Fyrirsögn</h4>
+                    <p>Þinn stíll – þín rödd. Undirfyrirsögn: Sérhannaðar prentanir, óaðfinnanleg gæði og þægindi í hverri hreyfingu. Finndu bolinn sem talar fyrir þig.</p>
+
+
+                    <h5>Af hverju að velja okkur?</h5>
+                    <p><strong>Frumleg hönnun:</strong> Allt frá naumhyggju yfir í djarfa götulist. </p>
+                    <p><strong>Úrvalsefni:</strong>  Efni sem anda og eru þægileg viðkomu.</p>
+                    <p><strong>Takmarkað upplag:</strong>  Vertu viss um að stíllinn þinn haldist einstakur.</p>
+            </div>
+
+            <img class="image" src="images/im1.png" alt="image is not found">
+
+
+            <div class="item2">
+                    <h3> Mikilvægar upplýsingar fyrir viðskiptavini  Viltu panta? Gakktu til liðs við klúbbinn okkar!</h3>
+                    <p>
+                        Mikilvægar upplýsingar fyrir viðskiptavini 
+                        Viltu panta? Gakktu til liðs við klúbbinn okkar!
+
+                        Við leggjum áherslu á öryggi og þægindi hvers viðskiptavinar. Til að setja vörur í körfu og ganga frá kaupum þarftu að skrá þig eða skrá þig inn á svæðið.
+
+                        Skráningin tekur innan við mínútu en opnar á fjölmarga kosti:
+
+                        Hraðari afgreiðsla pantana.
+
+                        Vörueftirlit í rauntíma .
+
+                        Aðgangur að pöntunarsögu og persónulegum afsláttum.
+                    </p>
+            </div>
+
+
+
+            <div class="item3">
+
+
+                <section id="form">
+                    <h4>Form</h4>
+                    <form action="fot.html" method="get">
+                        <fieldset>
+                            <legend>Vinsamlegast fylltu út alla reiti</legend>
+                            <label for="name">Nafn:</label>
+                            <input type="text" id="name" name="name" required placeholder="Name">
+
+                            <label for="email">Netfang:</label>
+                            <input type="email" id="email" name="email" required placeholder="Email">
+
+                            <label for="message">Skilaboð:</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Message"></textarea>
+
+                            <button class="send-form"> Senda</button>
+                        </fieldset>
+                    </form>
+                </section>
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+        
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+        <dialog id="modal-login" >
+        <article>
+            <header>
+            <button aria-label="Close" rel="prev" data-target="modal-login" onclick="toggleModal(event)"></button>
+            
+            </header>
+            
+            <form action="fot.html" method="get">
+            <label>
+                Notendanafn:
+                <input type="text" name="username" placeholder="User" required>
+            </label>
+            
+            <label>
+                Lykilorð:
+                <input type="password" name="password" placeholder="Password" required>
+            </label>
+            
+            <footer>
+                <button type="submit">Innskráning</button>
+            </footer>
+            </form>
+        </article>
+        </dialog>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+    </main>
+
+    <footer class="footer">
+        <p> @ Mabolurstutter Netfang: support@mabolurstutter.is Sími: +23112025 </p>
+    </footer>
+    
+
+
+    <script>
+        const modal = document.getElementById('modal-login');
+        const openBtn = document.getElementById('open-login');
+
+        function toggleModal(event) {
+            const targetId = event.currentTarget.dataset.target;
+            const dialog = document.getElementById(targetId);
+            if (dialog.open) {
+            dialog.close();
+            } else {
+            dialog.showModal();
+            }
+        }
+
+        openBtn.addEventListener('click', () => {
+            modal.showModal();
+        });
+    </script>
+
+
+
+
+</body>
+</html>
